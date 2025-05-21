@@ -1,0 +1,197 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+}
+
+#dark-screen {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dark-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch-btn {
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffdd57;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.switch-btn:hover {
+  background-color: #ffee85;
+  transform: scale(1.05);
+}
+
+/* พื้นหลังหลังเปิดไฟ */
+#main-screen {
+  padding: 20px;
+  background: linear-gradient(to top, #fff0f5, #ffe4e1);
+  height: 100vh;
+  width: 100vw;
+  display: flex;                /* ✅ ใช้ Flexbox */
+  justify-content: center;     /* ✅ กลางแนวนอน */
+  align-items: center;         /* ✅ กลางแนวตั้ง */
+  flex-direction: column;      /* ✅ เรียงแนวตั้ง */
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;               /* กันชนขอบเล็กน้อย */
+  box-sizing: border-box;
+}
+
+
+.birthday-container {
+  z-index: 1;
+}
+
+.cake {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: pop-in 1s ease-out;
+}
+
+.birthday-text {
+  font-size: 1.8rem;
+  color: #d6336c;
+  margin-bottom: 40px;
+  animation: fade-in 2s ease-in;
+}
+
+.balloon-wrapper {
+  position: absolute;
+  bottom: -100px;
+  animation: floatUp 12s linear infinite;
+  cursor: pointer;
+}
+
+.balloon {
+  width: 50px;
+  height: 70px;
+  background-color: pink;
+  border-radius: 50% 50% 50% 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+.string {
+  width: 2px;
+  height: 60px;
+  background-color: #555;
+  margin: 0 auto;
+  border-radius: 1px;
+  box-shadow: 0 0 3px 0 #aaa;
+}
+
+.sound-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.sound-btn:hover {
+  background-color: #fa4e6d;
+}
+
+.hint-text {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 220, 87, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #d6336c;
+  font-weight: bold;
+  animation: floatHint 3s ease-in-out infinite;
+  cursor: default;
+  user-select: none;
+  box-shadow: 0 0 8px rgba(214, 51, 108, 0.7);
+  z-index: 10;
+  text-align: center;
+  text-justify: auto;
+}
+
+.balloon.pop-click {
+  animation: pop-click-anim 0.5s ease forwards;
+}
+
+@keyframes pop-click-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes floatHint {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0.7;
+  }
+}
+
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

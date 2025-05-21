@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Mama B</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+</head>
+<body>
+  <div id="dark-screen">
+    <div class="dark-content">
+        <button id="turn-on-btn" class="switch-btn">ม่าม้ากดตรงนี้เปิดไฟให้หน่อยค่ะ :)</button>
+    </div>
+  </div>
+
+    <div id="main-screen" style="display: none;">
+        <div class="birthday-container">
+            <div class="cake">🎂</div>
+            <h1 class="birthday-text">สุขสันต์วันเกิดค่ะม่าม้า!</h1>
+            <div class="hint-text">ม่าม้าลองกดที่ลูกโป่งดูนะคะ 🎈</div>
+            <div id="balloons-container">
+            <!-- ลูกโป่งจะถูกสร้างจาก JS -->
+            </div>
+        </div>
+        <button id="toggle-sound-btn" class="sound-btn">
+            🔇 ปิดเสียง
+        </button>
+    </div>
+
+    <div id="yt-player-wrapper" style="display: none;">
+        <iframe
+            id="yt-player"
+            width="0"
+            height="0"
+            src="https://www.youtube.com/embed/4sZmPHJPvZE?enablejsapi=1"
+            frameborder="0"
+            allow="autoplay"
+        ></iframe>
+    </div>
+    <audio id="pop-sound" src="pop-sound.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
