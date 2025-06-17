@@ -15,10 +15,6 @@ This is a Happy Birhday web interactive experience for my Mom. A fun little surp
 
 > 🔗 [Click here to view the website](https://pakjira-p.github.io/happy-birthday-mom)
 
-## 📸 Screenshot
-
-_Add a screenshot here if you like_
-
 ## 🛠️ Built With
 
 - HTML5
